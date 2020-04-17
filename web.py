@@ -1,11 +1,14 @@
 import os
-from flask import Flask
+
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
-    return "<h1>Olá mundo!</h1>"
+    return render_template('index.html')
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
