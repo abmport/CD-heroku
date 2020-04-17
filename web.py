@@ -9,6 +9,7 @@ app = Flask(__name__, template_folder='template')
 def index():
     return render_template('index.html')
 
+@app.route("/fale-conosco.html")
 def fale_conosco():
     return render_template('fale-conosco.html')
 
