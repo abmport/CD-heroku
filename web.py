@@ -5,13 +5,14 @@ from flask import Flask, render_template
 app = Flask(__name__, template_folder='template')
 
 
-@app.route("/")
+@app.route("/index.html")
 def index():
     return render_template('index.html')
 
 @app.route("/fale-conosco.html")
 def fale_conosco():
     return render_template('fale-conosco.html')
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
