@@ -6,18 +6,8 @@ app = Flask(__name__, template_folder='template')
 
 
 @app.route("/")
-def index_1():
+def index():
     return render_template('index.html')
-
-
-@app.route("/index.html")
-def index_2():
-    return render_template('index.html')
-
-
-@app.route("/fale-conosco.html")
-def fale_conosco():
-    return render_template('fale-conosco.html')
 
 
 if __name__ == "__main__":
