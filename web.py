@@ -4,13 +4,16 @@ from flask import Flask, render_template
 
 app = Flask(__name__, template_folder='template')
 
+
 @app.route("/")
-def index():
+def index_1():
     return render_template('index.html')
 
+
 @app.route("/index.html")
-def index():
+def index_2():
     return render_template('index.html')
+
 
 @app.route("/fale-conosco.html")
 def fale_conosco():
