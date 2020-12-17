@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block corpo %}
+<nav>
+    <ul>
+        <a href="/cadastro">Cadastre-se</a>
+    </ul>
+</nav>
+
+<section>
+    <article>
+            <form action="{{ url_for('cadastro') }}" method="POST">
+                <p>
+                  Usuário:
+                  <input type="text" name="username">
+                   Senha:
+                  <input type="password" name="password">
+                  CPF:
+                  <input type="number" name="cpf">
+                  <input type="submit" value="Cadastrar">
+                </p>
+              </form>
+    </article>
+</section>
+{% endblock %}
